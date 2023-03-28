@@ -1,4 +1,4 @@
-# dj_final_project 
+# dj_final_project DEFINIR NOMBRE Y PROYECTO
 
 
 Here are some ideas to get you started:
@@ -12,7 +12,7 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 
-# **HOLA SOY EMANUEL**
+# **HOLA SOMOS GRUPO 19**
 ## Comentario.
 
 
