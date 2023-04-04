@@ -1,0 +1,50 @@
+/* Las variables deben declararse dentro de un selector
+    Se acostumbra usar :root para que la variable sea global 
+    Se declaran con dos guiones y el nombre
+    Para utilizarlas se usa la funcion var() y entre
+    los paréntesis se escribe el nombre de la variable
+
+    --primay-color = #3782A3 = rgb( 55,130,163) = rgba( 55,130,163,1) = rgb0(0.216,0.51,0.639)
+    shade 1 = #88C0D8 = rgb(136,192,216) = rgba(136,192,216,1) = rgb0(0.533,0.753,0.847)
+    shade 2 = #589EBD = rgb( 88,158,189) = rgba( 88,158,189,1) = rgb0(0.345,0.62,0.741)
+    shade 3 = #1D7297 = rgb( 29,114,151) = rgba( 29,114,151,1) = rgb0(0.114,0.447,0.592)
+    --navbar-footer = #0D5879 = rgb( 13, 88,121) = rgba( 13, 88,121,1) = rgb0(0.051,0.345,0.475)
+*/
+
+:root {
+    --primary-color : #3782A3;
+    --navbarfooter-color : #0D5879;
+    --button-color : #203038;
+    --button_hover-color : #4F656E;
+    --card-bg : #88C0D8;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+nav{
+    background-color: var(--navbarfooter-color);
+}
+
+.button-color{
+    background-color: var(--button-color);
+}
+
+.button-color:hover{
+    background-color: var(--button_hover-color);
+}
+
+.logo{
+    width: 10%;
+    height: 10%;
+}
+
+.card-color{
+    background-color:var(--card-bg);
+}
+
+.img-card{
+    width: 30%;
+    height: 30%;
+}
