@@ -1,4 +1,4 @@
-# dj_final_project DEFINIR NOMBRE Y PROYECTO
+# dj_final_project SYSCHAT
 
 
 Here are some ideas to get you started:
