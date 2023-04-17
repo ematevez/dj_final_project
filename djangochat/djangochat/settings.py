@@ -1,5 +1,5 @@
-from pathlib import Path
 import os
+from pathlib import Path
 from telnetlib import LOGOUT
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -16,11 +16,11 @@ SECRET_KEY = 'django-insecure-!79n+mp+d)1-=z7w5ee9f5*74mhqbene^c*89j@(1gsot5&t@o
 DEBUG = True
 
 #TODO buscar localhost
-ALLOWED_HOSTS = ['localhost','127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','192.168.0.139','192.168.1.44','192.168.0.165']
 
 LOGOUT_REDIRECT_URL = '/'
-LOGIN_REDIRECT_URL = '/rooms/'
-LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/login1/'
 
 
 # Application definition
@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'registration',
     'messenger',
     'profiles',
-    'pages.apps.PagesConfig',
     'ckeditor',
 ]
 
@@ -129,7 +128,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Auth redirects
 # LOGIN_REDIRECT_URL = 'pages:pages'
@@ -149,5 +148,5 @@ else:
     pass
 
 # Media Files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/')
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

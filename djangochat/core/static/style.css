@@ -17,14 +17,16 @@
     --button-color : #203038;
     --button_hover-color : #4F656E;
     --card-bg : #88C0D8;
+    --card : #589EBD;
+}
+.acomodo-foot{
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
 }
 
-body {
+.bodybg {
     background-color: var(--primary-color);
-}
-
-nav{
-    background-color: var(--navbarfooter-color);
 }
 
 .button-color{
@@ -35,9 +37,17 @@ nav{
     background-color: var(--button_hover-color);
 }
 
-.logo{
-    width: 10%;
-    height: 10%;
+.button-restore{
+    background-color: var(--card-bg);
+}
+
+.button-restore:hover{
+    background-color: var(--card);
+}
+
+.logo-home{
+    width: 50px;
+    height: 50px;
 }
 
 .card-color{
@@ -47,4 +57,10 @@ nav{
 .img-card{
     width: 30%;
     height: 30%;
+}
+
+.pie-pag{ 
+    padding: 1em 0;
+    text-align: center;
+    margin-top: auto !important;
 }

@@ -1,9 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
-from pages.urls import pages_patterns
 from profiles.urls import profiles_patterns
 from messenger.urls import messenger_patterns
 from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', include('core.urls')),
@@ -12,7 +12,6 @@ urlpatterns = [
     
     path('admin/', admin.site.urls),
     # Paths de Auth
-    path('pages/', include(pages_patterns)),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('registration.urls')),
     # Paths de profiles
@@ -20,4 +19,4 @@ urlpatterns = [
     # Paths de Messenger
     path('messenger/', include(messenger_patterns)),
 
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,40 +1,75 @@
 {% extends 'core/base.html' %}
 {% load static %}
-{% block title %}Perfil{% endblock %}
+{% block title %}Profile | {% endblock %}
 {% block content %}
-<style>.errorlist{color:red;} label{display:none}</style>
-<main role="main">
-  <div class="container">
-    <div class="row mt-3">
-      <div class="col-md-9 mx-auto mb-5">
-        <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
-          <div class="row">
-            <!-- Previa del avatar -->
-            <div class="col-md-2">
+    <style>.errorlist{color:red;} </style>
+  <div class="bodybg mt-4">
+        <div class="text-center">
+          <h1 class="text-3xl lg:text-6xl text-white">Profile Settings</h1>
+        </div>
+
+        <form method="post" action="." class="lg:w-1/4 px-4 mx-auto" enctype="multipart/form-data">{% csrf_token %}
+          {% comment %} <div class="row"> {% endcomment %}
+            <div class="mb-5 text-center">
               {% if request.user.profile.avatar %}
-                <img src="{{request.user.profile.avatar.url}}" class="img-fluid">
-                <p class="mt-1">¿Borrar? <input type="checkbox" id="avatar-clear" name="avatar-clear" /></p>
+                <label class="text-white">Image</label>
+                <br />
+                <img src="{{request.user.profile.avatar.url}}" class="w-full mt-2 px-4 py-2 rounded-xl">
+                <p class="text-white">¿Borrar? <input type="checkbox" id="avatar-clear" name="avatar-clear" /></p>
               {% else %}
-                <img src="{% static 'registration/img/no-avatar.jpg' %}" class="img-fluid">
+                <img src="{% static 'no-avatar.jpg' %}" class="w-full mt-2 px-4 py-2 rounded-xl">
               {% endif %}
             </div>
-            <!-- Formulario -->
-            <div class="col-md-10">
-              <h3>Perfil</h3>
-              <input type="file" name="avatar" class="form-control-file mt-3" id="id_avatar">
+
+            
+            <div class="mb-5 text-center">
+              <input type="file" name="avatar" class="text-white text-center mt-2 px-4 py-2" id="id_avatar">
+              <br />
+              <div class="mb-2">
+                <label class="text-white" for="inputState">Cargo</label>
+                <br />
+                  <select name="job" id="inputState" class="text-center px-4 py-2">
+                    {% if request.user.profile.job %}
+                      <option selected>{{request.user.profile.job}}</option>
+                      <option>JEMAQ</option>
+                      <option>JEOP</option>
+                      <option>JECU</option>
+                      <option>JEAB</option>
+                      <option>...</option>
+                    {% else %}
+                      <option selected>STATUS</option>
+                      <option name="job">JEMAQ</option>
+                      <option name="job">JEOP</option>
+                      <option name="job">JECU</option>
+                      <option name="job">JEAB</option>
+                      <option>...</option>
+                    {% endif %}
+                  </select>
+              </div>
+              <label class="text-white">Biografia</label>
+              <br />
               {{ form.bio }}
+              <br />
+              <label class="text-white">Web</label>
+              <br />
               {{ form.link }}
-              <input type="email" value="{{request.user.email}}" class="form-control mt-3" readonly>
+              <br />
+              <label class="text-white">Email</label>
+              <br />
+              <input type="email" value="{{request.user.email}}" class="mt-2 px-4 py-2" readonly>
+              <br />
+              
+            
               <p class="mt-3">
-                Si deseas editar tu email haz clic <a href="{% url 'profile_email' %}">aquí</a>.<br>
-                Y si quieres cambiar tu contraseña haz clic <a href="{% url 'password_change' %}">aquí</a>.
+                Editar tu email haz clic <a href="{% url 'profile_email' %}" class="rounded-xl text-white">aquí</a>.<br>
+                Cambiar tu contraseña haz clic <a href="{% url 'password_change' %}" class="rounded-xl text-white">aquí</a>.
               </p>
-              <input type="submit" class="btn btn-primary btn-block mt-3" value="Actualizar">
+              
+              
+              <button class="btn btn-primary mb-4">Update</button>
+              
             </div>
-          </div>
+  
         </form>
-      </div>
-    </div>
   </div>
-</main>
 {% endblock %}

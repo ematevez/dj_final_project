@@ -1,8 +1,7 @@
-<!-- todo_list/todo_app/templates/todo_app/todo_list.html -->
-{% extends "base.html" %}
+{% extends 'core/base.html' %}
 
 {% block content %}
-<div>
+<div class="bodybg">
     <div>
         <div>
             <h3>Edit list:</h3>
@@ -22,9 +21,9 @@
             {% endfor %}
         </ul>
         <p>
-            <input value="Add a new item" type="button" onclick="location.href='{% url "item-add" todo_list.id %}'" />
-            <input value="Delete this list" type="button"
-                onclick="location.href='{% url "list-delete" todo_list.id %}'" />
+            <input value="Add a new item" class="m-3 text-cemter" type="button" onclick="location.href='{% url "item-add" todo_list.id %}'" />
+            <input value="Delete this list" class="m-3 text-cemter" type="button" onclick="location.href='{% url "list-delete" todo_list.id %}'" />
+            <input value="Volver" class="m-3 text-cemter" type="button" onclick="location.href='/todo/'" />
         </p>
     </div>
 </div>
