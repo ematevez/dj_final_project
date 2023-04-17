@@ -68,11 +68,6 @@ python manage.py runserver
  [<img src="https://user-images.githubusercontent.com/22551090/206501284-baa34dc7-8118-4bb1-b7f6-b605ee916bb9.png" width=50><br><sub>Emanuel Tevez</sub>](https://github.com/ematevez) 
  
  #### | [Eduardo De Luca](https://www.linkedin.com/in/eduardo-de-luca-8b28924/) | 
- [<img src="https://user-images.githubusercontent.com/22551090/206501284-baa34dc7-8118-4bb1-b7f6-b605ee916bb9.png" width=50><br><sub>Emanuel Tevez</sub>](https://github.com/ematevez) 
+ [<img src="https://media.licdn.com/dms/image/C4D03AQHwmU1E3ZFswg/profile-displayphoto-shrink_200_200/0/1660144317426?e=1687392000&v=beta&t=2uhaA6U4dZHJhDyewi0lWIQ5aaH0lk0fT_f45TCT4gI" width=50><br><sub>Eduardo De Luca</sub>](https://github.com/ematevez) 
  
- #### | [Emanuel Tevez](https://www.linkedin.com/in/emanuel-juli%C3%A1n-tevez/) | 
- [<img src="https://user-images.githubusercontent.com/22551090/206501284-baa34dc7-8118-4bb1-b7f6-b605ee916bb9.png" width=50><br><sub>Emanuel Tevez</sub>](https://github.com/ematevez) 
- 
- #### | [Emanuel Tevez](https://www.linkedin.com/in/emanuel-juli%C3%A1n-tevez/) | 
- [<img src="https://user-images.githubusercontent.com/22551090/206501284-baa34dc7-8118-4bb1-b7f6-b605ee916bb9.png" width=50><br><sub>Emanuel Tevez</sub>](https://github.com/ematevez) 
 
