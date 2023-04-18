@@ -70,4 +70,7 @@ python manage.py runserver
  #### | [Eduardo De Luca](https://www.linkedin.com/in/eduardo-de-luca-8b28924/) | 
  [<img src="https://media.licdn.com/dms/image/C4D03AQHwmU1E3ZFswg/profile-displayphoto-shrink_200_200/0/1660144317426?e=1687392000&v=beta&t=2uhaA6U4dZHJhDyewi0lWIQ5aaH0lk0fT_f45TCT4gI" width=50><br><sub>Eduardo De Luca</sub>](https://github.com/) 
  
+Toscano	Jose	
+Caniffi Bevans	Sergio	
+ 
 
