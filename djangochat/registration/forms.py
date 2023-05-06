@@ -20,11 +20,14 @@ class UserCreationFormWithEmail(UserCreationForm):
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ['avatar', 'bio', 'link']
+        fields = ['avatar','bio', 'link','job','name', 'last_name']
         widgets = {
-            'avatar': forms.ClearableFileInput(attrs={'class':'form-control-file mt-3'}),
-            'bio': forms.Textarea(attrs={'class':'form-control mt-3', 'rows':3, 'placeholder':'Biografía'}),
-            'link': forms.URLInput(attrs={'class':'form-control mt-3', 'placeholder':'Enlace'}),
+            'avatar': forms.ClearableFileInput(attrs={'class':'w-full mt-2 px-4 py-2 rounded-xl'}),
+            'bio': forms.Textarea(attrs={'class':'w-full mt-2 px-4 py-2 rounded-xl', 'rows':3, 'placeholder':'Biografía'}),
+            'link': forms.URLInput(attrs={'class':'w-full mt-2 px-4 py-2 rounded-xl', 'placeholder':'Enlace'}),
+            'job': forms.TextInput(attrs={'class':'w-full mt-2 px-4 py-2 rounded-xl', 'placeholder':'Enlace'}),
+            'name': forms.TextInput(attrs={'class':'w-full mt-2 px-4 py-2 rounded-xl', 'placeholder':'Nombre'}),
+            'last_name': forms.TextInput(attrs={'class':'w-full mt-2 px-4 py-2 rounded-xl', 'placeholder':'Apellido'}),
         }
 
 

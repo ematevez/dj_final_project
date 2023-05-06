@@ -1,5 +1,5 @@
-from pathlib import Path
 import os
+from pathlib import Path
 from telnetlib import LOGOUT
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -16,33 +16,38 @@ SECRET_KEY = 'django-insecure-!79n+mp+d)1-=z7w5ee9f5*74mhqbene^c*89j@(1gsot5&t@o
 DEBUG = True
 
 #TODO buscar localhost
-ALLOWED_HOSTS = ['localhost','127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','192.168.0.139','192.168.1.44','192.168.0.128']
 
 LOGOUT_REDIRECT_URL = '/'
-LOGIN_REDIRECT_URL = '/rooms/'
-LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/todo/'
+LOGIN_URL = '/login1/'
 
 
 # Application definition
-
-INSTALLED_APPS = [
+BASE_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'channels',
+    ]
+
+MY_APPS = [
     'core',
     'room',
     'todo_app',
-    #revisar estas dos son de las nuevas modificaciones
     'registration',
     'messenger',
+    'mychatapp',
     'profiles',
-    'pages.apps.PagesConfig',
+]
+
+EXTERNAL_APPS =[
+    'channels',
     'ckeditor',
 ]
+INSTALLED_APPS = BASE_APPS + MY_APPS + EXTERNAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -85,14 +90,26 @@ CHANNEL_LAYERS = {
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'chat-barco',
+        'USER': 'postgres',
+        'PASSWORD': '12345',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
 
+# #  
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -129,7 +146,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Auth redirects
 # LOGIN_REDIRECT_URL = 'pages:pages'
@@ -149,5 +166,5 @@ else:
     pass
 
 # Media Files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/')
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

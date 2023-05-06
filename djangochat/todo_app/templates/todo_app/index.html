@@ -1,27 +1,27 @@
-{% extends 'base.html' %}
+{% extends 'core/base.html' %}
 
 {% block content %}
-
-    {% if object_list %}
-    <h3>All my lists</h3>
-    {% endif %}
-    <ul>
-        {% for todolist in object_list %}
-        <li>
-            <div role="button" 
-                onclick="location.href='{% url "list" todolist.id %}'">
-                {{ todolist.title }}
-            </div>
-        </li>
-        {% empty %}
-        <h4>You have no lists!</h4>
-        {% endfor %}
-    </ul>
-    <p>
-        <input value="Add a new list" type="button"
-            onclick="location.href='{% url "list-add" %}'"/>
-        <input value="try style" type="button" class="px-5 py-3 rounded-xl text-white bg-teal-800 hover:bg-teal-500"
-            onclick="location.href='{% url "list-add" %}'"/>
-    </p>
-    
+    <div class="mt-4 text-center bodybg">
+        {% if object_list %}
+            <h1 class="text-white">My Task:</h1>
+        {% endif %}
+        
+        <ul>
+            {% for todolist in object_list %}
+                {% if request.user.profile.job == todolist.title  %}
+                    <li>
+                        <div role="button" class="btn btn-danger mb-2" onclick="location.href='{% url "list" todolist.id %}'">
+                            {{ todolist.title }}
+                        </div>
+                    </li>
+                {% endif %}
+            {% empty %}
+                <h1 class="mt-4 text-white">My Task</h1>
+            
+            {% endfor %}
+        </ul>
+        <p>
+            <input value="Add a new list" class="btn btn-primary" onclick="location.href='{% url "list-add" %}'"/>
+        </p>
+    </div>
 {% endblock %}
