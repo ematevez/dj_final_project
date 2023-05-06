@@ -17,6 +17,7 @@ class Profile(models.Model):
     bio = models.TextField(null=True, blank=True)
     link = models.URLField(max_length=200, null=True, blank=True)
     job = models.TextField(max_length=200, null=True, blank=True)
+<<<<<<< HEAD
     name = models.TextField(max_length=100, null=True, blank=True)
     last_name = models.TextField(max_length=100, null=True, blank=True)
     # pic = models.ImageField(upload_to="img", blank=True, null=True)
@@ -24,6 +25,8 @@ class Profile(models.Model):
     
     def __str__(self):
         return self.user + ' ' + self.name + ' ' + self.last_name
+=======
+>>>>>>> f849a777eae18a9012c715445b23a6cf2612f120
 
     class Meta:
         ordering = ['user__username']

@@ -16,10 +16,17 @@ SECRET_KEY = 'django-insecure-!79n+mp+d)1-=z7w5ee9f5*74mhqbene^c*89j@(1gsot5&t@o
 DEBUG = True
 
 #TODO buscar localhost
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['127.0.0.1','192.168.0.139','192.168.1.44','192.168.0.128']
 
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_REDIRECT_URL = '/todo/'
+=======
+ALLOWED_HOSTS = ['127.0.0.1','192.168.0.139','192.168.1.44','192.168.0.165']
+
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/'
+>>>>>>> f849a777eae18a9012c715445b23a6cf2612f120
 LOGIN_URL = '/login1/'
 
 
@@ -41,10 +48,13 @@ MY_APPS = [
     'messenger',
     'mychatapp',
     'profiles',
+<<<<<<< HEAD
 ]
 
 EXTERNAL_APPS =[
     'channels',
+=======
+>>>>>>> f849a777eae18a9012c715445b23a6cf2612f120
     'ckeditor',
 ]
 INSTALLED_APPS = BASE_APPS + MY_APPS + EXTERNAL_APPS
