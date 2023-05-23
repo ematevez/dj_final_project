@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIHDO | Conicet </title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/fav.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/fav.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/fav.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/fav.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/fav.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/fav.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/fav.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/fav.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/fav.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/static/fav.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/fav.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/fav.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/fav.ico/favicon-16x16.png">
+    <link rel="manifest" href="/static/fav.ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/static/fav.ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--STYLESHEET-->
+    <!--=================================================-->
+
+    <!--Open Sans Font -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+
+    <!--Bootstrap Stylesheet -->
+    <!-- Latest compiled and minified CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" >
+
+    <!--MagicCheck Stylesheet -->
+    <link href="/static/css/magic-check.min.css" rel="stylesheet">
+
+
+    <!--Nifty Stylesheet -->
+    <link href="/static/css/nifty.min.css" rel="stylesheet">
+
+    <!--Nifty Stylesheet -->
+    <link href="/static/css/conicet.css" rel="stylesheet">
+    <link href="/static/css/base.css" rel="stylesheet">
+<!--
+    <link href="/static/css/print.css" rel="stylesheet" media="print">
+-->
+    <!--Font Awesome -->
+    <link href="/static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" >
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> -->
+
+    
+<!--DataTables [ OPTIONAL ]-->
+<link href="/static/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+<link href="/static/plugins/select2/css/select2.min.css" rel="stylesheet">
+<link href="/static/plugins/datatables/media/css/dataTables.bootstrap.css" rel="stylesheet">
+<link href="/static/plugins/datatables/extensions/Responsive/css/dataTables.responsive.css" rel="stylesheet">
+
+</head>
+<body>
+    <div id="container" class=" effect mainnav-lg">
+        
+
+
+
+<!--NAVBAR-->
+<!--===================================================-->
+<header id="navbar" class="no-print" >
+    <div id="navbar-container" class="boxed">
+
+        <!--Brand logo & name-->
+        <!--================================-->
+        <div class="navbar-header">
+            <a href="/" class="navbar-brand">
+                <img src="/static/img/logo-conicet.png" alt="New Assets" class="brand-icon" style="padding: 10px;">
+                <div class="brand-title">
+                    <span class="brand-text">UNIHDO</span>
+                </div>
+            </a>
+        </div>
+        <!--================================-->
+        <!--End brand logo & name-->
+
+
+        <!--Navbar Dropdown-->
+        <!--================================-->
+        <div class="navbar-content clearfix">
+            <ul class="nav navbar-top-links">
+
+                <li class="tgl-menu-btn">
+                    <a class="mainnav-toggle" href="#">
+                        <i class="fa fa-bars icon-lg"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <h3 class="text-dark">UNIHDO <small style="color:lightgrey">CONICET | MINDEF</small></h3>
+                </li>
+            </ul>
+            <ul class="nav navbar-top-links pull-right">
+
+                <!--User dropdown-->
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <li id="dropdown-user" class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+                        <span class="pull-right">
+                            <i class="fa fa-user ic-user"></i>
+                        </span>
+                        <div class="username hidden-xs">Aníbal Germán Pistan</div>
+                    </a>
+
+
+                    <div class="dropdown-menu dropdown-menu-md dropdown-menu-right panel-default">
+
+                        <!-- User dropdown menu -->
+                        <ul class="head-list">
+                            <li>
+                                <span class="info">Buque Oceanográfico ARA Puerto Deseado</span>
+                            </li>
+                            
+                            <li>
+                                <span class="info">Operaciones</span>
+                            </li>
+                            
+                            <li>
+                                <a href="/users/change-password">
+                                    <i class="fa fa-key icon-lg"></i> Cambiar contraseña
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/accounts/logout/">
+                                    <i class="fa fa-power-off icon-lg"></i> Cerrar Sesión
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </li>
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <!--End user dropdown-->
+
+            </ul>
+        </div>
+        <!--================================-->
+        <!--End Navbar Dropdown-->
+
+    </div>
+</header>
+<!--===================================================-->
+<!--END NAVBAR-->
+
+
+<div class="boxed">
+
+    <!--CONTENT CONTAINER-->
+    <!--===================================================-->
+    <div id="content-container">
+
+        
+        <!--Page Title-->
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div id="page-title">
+            <h1 class="page-header text-overflow"><span class="fa fa-shopping-cart"></span>&nbsp;Solicitudes de Aprovisionamiento</h1>
+            
+<div class="searchbox text-right" style="width: auto;">
+    <a href="/purchases/provisioning/create" class="btn btn-primary btn-lg"><i class="fa fa-plus"></i> Nueva Solicitud</a>
+</div>
+
+            <!--Searchbox-->
+            <!--
+            <div class="searchbox">
+                <div class="input-group custom-search-form">
+                    <input type="text" class="form-control" placeholder="Search..">
+                    <span class="input-group-btn">
+                        <button class="text-muted" type="button"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+            </div>
+            -->
+        </div>
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <!--End page title-->
+
+
+        <!--Breadcrumb-->
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <!--
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Library</a></li>
+            <li class="active">Data</li>
+        </ol>
+        -->
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <!--End breadcrumb-->
+
+        <!--Page content-->
+        <!--===================================================-->
+        <div id="page-content">
+            
+<!-- <h1>List Title</h1> -->
+
+<!-- Row selection and deletion (multiple rows) -->
+<!--===================================================-->
+<div class="panel">
+    
+    <div id="ig-toolbar" class="table-toolbar-left" style="display:none">
+        
+<div class="input-group">
+    <select id="tool_year" name="tool_year">
+        <option value="">----</option>
+        
+        <option value="2023" selected>2023</option>
+        
+        <option value="2022" >2022</option>
+        
+        <option value="2021" >2021</option>
+        
+        <option value="2020" >2020</option>
+        
+        <option value="2019" >2019</option>
+        
+        <option value="2018" >2018</option>
+        
+        <option value="2017" >2017</option>
+        
+        <option value="2016" >2016</option>
+        
+        <option value="2015" >2015</option>
+        
+        <option value="2014" >2014</option>
+        
+    </select>
+</div>
+<div class="input-group">
+    <select id="tool_section" name="tool_section">
+        
+        <option value="2">Q20</option>
+        
+        <option value="3">Q21</option>
+        
+        <option value="1">UNIHDO</option>
+        
+
+    </select>
+</div>
+<div class="input-group">
+    <select id="tool_sector" name="tool_sector">
+        
+        <option value="">Todos los Departamentos</option>
+        
+        <option value="A">Abastecimiento</option>
+        
+        <option value="C">Cubierta</option>
+        
+        <option value="M">Máquinas</option>
+        
+        <option value="O">Operaciones</option>
+        
+        <option value="S">Sanidad</option>
+        
+        <option value="SC">Segundo Comandante</option>
+        
+    </select>
+</div>
+<div class="input-group">
+  <input id="tool_date" class="form-control" placeholder="Fecha" style="width:180px" >
+  <span class="input-group-addon bg-gray"><i class="fa fa-calendar"></i></span>
+</div>
+<div class="input-group">
+  <input type="search" class="form-control" placeholder="Buscar ... " style="width: 180px; padding-left: 8px">
+  <span class="input-group-addon bg-gray"><i class="fa fa-search"></i></span>
+</div>
+
+
+    </div>
+    <div class="panel-body">
+        
+<table id="igDataTable" class="table table-striped table-bordered big" cellspacing="0" width="100%" data-url="/purchases/provisioning/data">
+    <thead>
+        <tr>
+            <th width="20px">P</th>
+            <th>Id.</th>
+            <th>Orden</th>
+            <th width="80px">Fecha</th>
+            <th width="80px">Fecha Req.</th>
+            <th>Solicitante</th>
+            <th>Unidad</th>
+            <th>Depto.</th>
+            <th>Rubro</th>
+            <th>Obj. Contratación</th>
+            <th>Estado</th>
+            <th width="40px">Items</th>
+            <th width="40px">E.T.</th>
+            <th width="40px">PDF</th>
+            <th width="60px">&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+    </div>
+</div>
+<!--===================================================-->
+<!-- End Row selection and deletion (multiple rows) -->
+
+<!--Confirm Delete Modal-->
+<!--===================================================-->
+<div class="modal fade" id="delete-modal" role="dialog" tabindex="-1" aria-labelledby="delete-modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!--Modal header-->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i></button>
+                <h4 class="modal-title">Borrar?</h4>
+            </div>
+
+            <!--Modal body-->
+            <div class="modal-body">
+                <p class="text-center">Esta seguro que quiere borrar este elemento?</p>
+            </div>
+
+            <!--Modal footer-->
+            <div class="modal-footer">
+                <button data-dismiss="modal" class="btn btn-default" type="button">Cancelar</button>
+                <button class="btn btn-danger">Borrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--===================================================-->
+<!--End Confirm Delete Modal-->
+
+
+        </div>
+        <!--===================================================-->
+        <!--End page content-->
+
+        
+    </div>
+    <!--===================================================-->
+    <!--END CONTENT CONTAINER-->
+
+
+    
+
+
+<!--MAIN NAVIGATION-->
+<!--===================================================-->
+<nav id="mainnav-container">
+    <div id="mainnav">
+
+        <!--Menu-->
+        <!--================================-->
+        <div id="mainnav-menu-wrap">
+            <div class="nano">
+                <div class="nano-content" style="padding-top: 0">
+                    <ul id="mainnav-menu" class="list-group">
+
+                        
+                        <li class="active">
+                            <a href="#" aria-expanded="true">
+                                <i class="fa fa-shopping-basket"></i>
+                                <span class="menu-title">Compras</span>
+                            </a>
+                            <ul aria-expanded="true" style="">
+
+                            <li class="menu-active">
+                                <a href="/purchases/provisioning">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span class="menu-title">Solicitudes</span>
+                                </a>
+                            </li>
+                            
+
+                            
+                            </ul>
+                        </li>
+
+                        <li >
+                            <a href="/stock/">
+                                <i class="fa fa-cubes"></i>
+                                <span class="menu-title">Stock</span>
+                            </a>
+                        </li>
+
+                        <li >
+                            <a href="/assets/" aria-expanded="true">
+                                <i class="fa fa-diamond"></i>
+                                <span class="menu-title">Capital</span>
+                            </a>
+                        </li>
+
+                        <li >
+                            <a href="/expenses/" >
+                                <i class="fa fa-book"></i>
+                                <span class="menu-title">Gastos</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <!--================================-->
+        <!--End menu-->
+
+    </div>
+</nav>
+<!--===================================================-->
+<!--END MAIN NAVIGATION-->
+
+</div>
+
+<!-- FOOTER -->
+<!--===================================================-->
+<footer id="footer">
+    <p class="pad-lft">&#0169; 2023 UNIDAD DE APOYO A INVESTIGACIONES HIDROGRAFICAS Y OCEANOGRAFICAS (UNIHDO DIGITAL). Creado por <a target="_blank" href="//south.vision">south.vision</a></p>
+</footer>
+<!--===================================================-->
+<!-- END FOOTER -->
+
+
+<!-- SCROLL PAGE BUTTON -->
+<!--===================================================-->
+<button class="scroll-top btn">
+    <i class="pci-chevron chevron-up"></i>
+</button>
+<!--===================================================-->
+
+
+
+    </div>
+    <!--===================================================-->
+    <!-- END OF CONTAINER -->
+
+    <!--jQuery -->
+    <script src="/static/js/jquery.min.js"></script>
+    <!--BootstrapJS -->
+    <script src="/static/js/bootstrap.min.js"></script>
+    <!--Nifty Admin -->
+    <script src="/static/js/nifty.min.js"></script>
+
+    
+
+
+
+<script>
+var USER_SECTION=2,
+    USER_SECTOR="O";
+</script>
+
+<!--DataTables [ OPTIONAL ]-->
+<script src="/static/plugins/datatables/media/js/jquery.dataTables.js"></script>
+<script src="/static/plugins/datatables/media/js/dataTables.bootstrap.js"></script>
+<script src="/static/plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+<script src="/static/js/sv.dataTables.js"></script>
+
+<!--Select2 -->
+<script src="/static/plugins/select2/js/select2.min.js"></script>
+<script src="/static/plugins/select2/js/i18n/es.js"></script>
+
+<!--Date -->
+<script src="/static/plugins/bootstrap-daterangepicker/moment.min.js"></script>
+<script src="/static/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+
+
+<script src="/static/js/init.toolbar.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+  SouthVisionApp.DataTable.init({
+    url: $('#igDataTable').data('url'),
+    dom: '<"toolbar">rtip',
+    columns: [
+        { "sName": "priority", "sClass": "text-center" },
+        { "sName": "id" },
+        { "sName": "order" },
+        { "sName": "created_at" },
+        { "sName": "date" },
+        { "sName": "created_by" },
+        { "sName": "section" },
+        { "sName": "sector" },
+        { "sName": "category" },
+        { "sName": "reason" },
+        { "sName": "status" },
+        { "sName": "items", "sClass": "text-right" },
+        { "sName": "attach", "sClass": "text-center" },
+        { "sName": "pdf", "sClass": "text-center" },
+        { "sName": "options", "sClass": "text-center"},
+    ],
+    extraParams: function ( aoData ) {
+      aoData.push( { "name": "tool_year", "value": $('#tool_year').val()} );
+      aoData.push( { "name": "tool_date", "value": $('#tool_date').val()} );
+      aoData.push( { "name": "tool_section", "value": $('#tool_section').val()} );
+      aoData.push( { "name": "tool_sector", "value": $('#tool_sector').val()} );
+    },
+  });
+});
+</script>
+
+
+    <script>
+    var UNIDHO=1, ALL_SECTORS='';
+
+    $(document).ready(function() {
+
+    //Activate the Bootstrap Tooltips & Popovers
+    $('[data-toggle="tooltip"]').tooltip()
+
+    
+    })
+    </script>
+    </body>
+</html>
