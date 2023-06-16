@@ -1,0 +1,88 @@
+#page-content { padding: 0 }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] { -moz-appearance:textfield; }
+
+.input-group input[type=search].form-control {
+	width: 0;
+    padding:0;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+.input-group input[type=search].form-control:focus {
+	width: 200px;
+    padding: 6px 12px;
+}
+
+.select2-container span.select2-dropdown,
+.modal span.select2-container {
+    width: 100%;
+    z-index:10050;
+}
+
+.typeahead.dropdown-menu {
+    z-index: 10051;
+}
+
+form .form-action a.text-danger {margin-left: 20px }
+form .asteriskField {color: red; margin-left: 6px }
+
+/*Select2 ReadOnly Start*/
+select[readonly].select2-hidden-accessible + .select2-container {
+    pointer-events: none;
+    touch-action: none;
+}
+
+select[readonly].select2-hidden-accessible + .select2-container .select2-selection {
+    background: #eee;
+    box-shadow: none;
+}
+
+select[readonly].select2-hidden-accessible + .select2-container .select2-selection__arrow,
+select[readonly].select2-hidden-accessible + .select2-container .select2-selection__clear {
+    display: none;
+}
+
+.navbar-top-links .head-list li span.info {
+    display: block;
+    padding: 10px;
+}
+
+.tab-base .nav-tabs>li:not(.active)>a:hover,
+.tab-base .nav-tabs>.active>a,
+.tab-base .nav-tabs>.active a:hover,
+.tab-base .nav-tabs>.active>a:focus {
+    background-color: #2b323a;
+    color: white;
+}
+
+.tab-base .tab-content {
+    border: 1px solid #efefef;
+    margin-bottom: 20px;
+}
+
+.menu-active {
+    color: #ffc400;
+}
+
+#mainnav-menu ul a, .menu-popover .sub-menu ul a {
+    padding: 8px 20px 8px 35px;
+}
+
+#main-form>.form-action {
+    border-top: 1px solid lightgrey;
+    background-color: #ff04;
+    padding:10px 0;
+}
+
+@media (min-width: 768px) {
+    #navbar {
+        z-index: 4000;
+    }
+}

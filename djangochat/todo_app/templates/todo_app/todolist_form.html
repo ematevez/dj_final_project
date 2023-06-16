@@ -1,10 +1,9 @@
-<!-- todo_list/todo_app/templates/todo_app/todolist_form.html -->
-{% extends "base.html" %}
+{% extends 'core/base.html' %}
 
 {% block content %}
 
 <h3>{{ title }}</h3>
-<div>
+<div class="bodybg">
     <div>
         <form method="post">
             {% csrf_token %}
@@ -13,6 +12,6 @@
             <input value="Cancel" type="button" onclick="location.href='{% url "index" %}';">
         </form>
     </div>
- </div>
+</div>
 
 {% endblock %}

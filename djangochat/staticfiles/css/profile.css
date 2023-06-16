@@ -1,0 +1,7 @@
+.margen{
+    margin-top: 100px;
+    margin-bottom: 500px;
+}
+
+.profile-avatar{float:left;width:4rem;height:4rem}
+.profile-data{padding-left:4.5rem;padding-top:.4rem;}

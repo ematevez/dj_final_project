@@ -1,37 +1,23 @@
-# dj_final_project DEFINIR NOMBRE Y PROYECTO
+# ⚡ dj_final_project SYSCHAT
 
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
-
-# **HOLA SOMOS GRUPO 19**
+# **🤔SOMOS GRUPO 19🤔**
 ## Comentario.
+Sistema de getion de recursos, con comunicacion interna, notificaciones personalizadas y graficos para su estacuion de trabajo.
+https://ematevez1.pythonanywhere.com/
+![image](https://github.com/ematevez/dj_final_project/assets/70983593/d9206e36-1893-4bd7-8842-9d74b5ebcff9)
 
-Como hacer que funcione...
-# chat-barco
- Chat con accesorios para grupo de trabajo
+![image](https://github.com/ematevez/dj_final_project/assets/70983593/594291ea-7133-4f47-b98e-04aeb8d164a4)
 
----------Dependencias---------------------
-Entorno virtual
+![image](https://github.com/ematevez/dj_final_project/assets/70983593/4abc888b-9b11-4f51-a65f-29d7eb15243d)
+
+---Dependencias Como usar---
+
+# Entorno virtual
 ### pip install virtualenv
 ### virtualenv env
 ### source env/Scripts/activate
-"Si queres instala un entorno virtual"
 ### pip install -r requirements.txt
-
-### pip install django
-### pip install channels==3.0.5
-### pip install asgiref==3.4.1
-### pip install pytz==2021.3
-### pip install sqlparse==0.4.2
 
 Paleta de Colores en el Archivo
 
@@ -68,11 +54,7 @@ python manage.py runserver
  [<img src="https://user-images.githubusercontent.com/22551090/206501284-baa34dc7-8118-4bb1-b7f6-b605ee916bb9.png" width=50><br><sub>Emanuel Tevez</sub>](https://github.com/ematevez) 
  
  #### | [Eduardo De Luca](https://www.linkedin.com/in/eduardo-de-luca-8b28924/) | 
+ [<img src="https://user-images.githubusercontent.com/22551090/206501284-baa34dc7-8118-4bb1-b7f6-b605ee916bb9.png" width=50><br><sub>Eduardo De Luca </sub>](https://github.com/gal-eze) 
+
  
- 
- #### | [Emanuel Tevez](https://www.linkedin.com/in/emanuel-juli%C3%A1n-tevez/) | 
- [<img src="https://user-images.githubusercontent.com/22551090/206501284-baa34dc7-8118-4bb1-b7f6-b605ee916bb9.png" width=50><br><sub>Emanuel Tevez</sub>](https://github.com/ematevez) 
- 
- #### | [Emanuel Tevez](https://www.linkedin.com/in/emanuel-juli%C3%A1n-tevez/) | 
- [<img src="https://user-images.githubusercontent.com/22551090/206501284-baa34dc7-8118-4bb1-b7f6-b605ee916bb9.png" width=50><br><sub>Emanuel Tevez</sub>](https://github.com/ematevez) 
 
