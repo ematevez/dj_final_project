@@ -1,37 +1,22 @@
-# dj_final_project SYSCHAT
+# ⚡ dj_final_project SYSCHAT
 
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
-
-# **HOLA SOMOS GRUPO 19**
+# **🤔SOMOS GRUPO 19🤔**
 ## Comentario.
+Sistema de getion de recursos, con comunicacion interna, notificaciones personalizadas y graficos para su estacuion de trabajo.
+https://ematevez1.pythonanywhere.com/
+![image](https://github.com/ematevez/dj_final_project/assets/70983593/d9206e36-1893-4bd7-8842-9d74b5ebcff9)
 
-Como hacer que funcione...
-# chat-barco
- Chat con accesorios para grupo de trabajo
+![image](https://github.com/ematevez/dj_final_project/assets/70983593/594291ea-7133-4f47-b98e-04aeb8d164a4)
 
----------Dependencias---------------------
-Entorno virtual
+![image](https://github.com/ematevez/dj_final_project/assets/70983593/4abc888b-9b11-4f51-a65f-29d7eb15243d)
+
+---Dependencias Como usar---
+
+#Entorno virtual
 ### pip install virtualenv
 ### virtualenv env
 ### source env/Scripts/activate
-"Si queres instala un entorno virtual"
 ### pip install -r requirements.txt
-
-### pip install django
-### pip install channels==3.0.5
-### pip install asgiref==3.4.1
-### pip install pytz==2021.3
-### pip install sqlparse==0.4.2
 
 Paleta de Colores en el Archivo
 
