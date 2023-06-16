@@ -192,3 +192,19 @@ for datos in lista_datos:
 
 
 pdf.output('djangochat/Auxiliar/PDF-Creator/Reporte.pdf')
+
+#https://products.aspose.com/words/es/python-net/edit/pdf/
+
+#import aspose.words as aw
+
+def modificarpdf():
+
+        doc = aw.Document("djangochat/Auxiliar/PDF-Creator/Reporte.pdf ")
+        builder = aw.DocumentBuilder(doc)
+
+        # Insertar texto al principio del documento.
+        builder.move_to_document_start()
+        builder.writeln("Morbi enim nunc faucibus a.")
+        doc.update_page_layout()
+
+        doc.save("Output.pdf")

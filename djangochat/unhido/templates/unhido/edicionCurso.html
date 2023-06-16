@@ -1,0 +1,113 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}UNIHDO-Editar | {% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <h2>Modifica Solicitud</h2>
+        <div class="card">
+            <div class="card-body">
+                <form action="/editarCurso/" method="POST">{% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" id="txtCodigo" name="txtCodigo" value="{{curso.sol_id_autoincremental}}" class="form-control" readonly required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fecha_sol" class="control-label">Fecha Requerida<span class="text-danger">*</span></label> 
+                        <input type="text" name="fecha_sol" value="{{curso.fecha_sol}}" class="form-control" readonly required/>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="unidad" class="control-label">Unidad<span class="text-danger">*</span></label> 
+                        <input type="text" name="unidad" value="{{curso.unidad}}" class="form-control" readonly required/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="depto" class="control-label">Depto<span class="text-danger">*</span></label> 
+                        <input type="text" name="depto" value="{{curso.depto}}" class="form-control" readonly required/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rubro" class="control-label">Rubro<span class="text-danger">*</span></label>
+                        <select name="rubro" class="select form-control" id="rubro"> 
+                            <option name="rubro" value="Bs.Consumo" selected>{{curso.rubro}}</option>
+                            <option name="rubro" value="Bs.Consumo">Bs.Consumo</option> 
+                            <option name="rubro" value="Equipamiento">Equipamiento</option> 
+                            <option name="rubro" value="Gs.Bancarios">Gs.Bancarios</option> 
+                            <option name="rubro" value="Gs.Institucionales">Gs.Institucionales</option> 
+                            <option name="rubro" value="Gs.Mant.Ed.">Gs.Mant.Ed.</option> 
+                            <option name="rubro" value="Gs.Mant.Eq">Gs.Mant.Eq.</option> 
+                            <option name="rubro" value="Otros Gastos">Otros Gastos</option> 
+                            <option name="rubro" value="Pasajes y Viáticos">Pasajes y Viáticos</option> 
+                            <option name="rubro" value="Seguros">Seguros</option> 
+                            <option name="rubro" value="Serv.Basicos">Serv.Básicos</option> 
+                            <option name="rubro" value="Serv.3 No Pe">Serv.3 No Pe.</option>
+                        </select> 
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Objeto" class="control-label">Objeto<span class="text-danger">*</span></label> 
+                        <input type="text" name="objeto" value="{{curso.objeto}}" class="form-control" readonly required/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prioridad" class="control-label">Prioridad<span class="text-danger">*</span></label>
+                        <select name="prioridad" class="select form-control" id="prioridad"> 
+                            {% if curso.prioridad == 'Alta'%}
+                                        <option name="prioridad" value="Alta" selected>Alta</option>
+                                        <option name="prioridad" value="Normal">Normal</option> 
+                                    {% else %}
+                                        <option name="prioridad" value="Normal" selected>Normal</option> 
+                                        <option name="prioridad" value="Alta">Alta</option>
+                                    {% endif %}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="esp_tex" class="control-label">Especificaciones Técnicas<span class="text-danger">*</span></label>
+                        <input type="text" name="esp_tec" class="form-control" value="{{curso.esp_tec.url}}" id="id_avatar" readonly required>
+                        <br />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="valida" class="control-label">Validaciòn<span class="text-danger">*</span></label>
+                            {% if curso.valida == 1 %}
+                                <input type="text" name="valida" class="form-control" value="Falta validacion 2K"readonly required>
+                            {% elif curso.valida == 2%}
+                                <input type="text" name="valida" class="form-control" value="Falta validacion K"readonly required>
+                            {% else %}
+                                <input type="text" name="valida" class="form-control" value="Enviada"readonly required>
+                            {%endif%}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="numCreditos" name="numCreditos" value="{{curso.creditos}}" class="form-control" min="1" max="9"
+                            value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <div  class="form-group form-action" class="form-group"> 
+                            <div class="aab controls col-sm-4"></div> 
+                                <input type="submit" name="save_changes" value="Guardar" class="btn btn-primary"/>
+                                <a class='btn btn-danger' href="{% url 'general' %}">Cancelar</a> 
+                        </div> 
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

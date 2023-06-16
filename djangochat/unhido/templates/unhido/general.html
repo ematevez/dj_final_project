@@ -4,55 +4,24 @@
 {% block title %}UNIHDO-Conicet | {% endblock %}
 
 {%block css%}
-    <link rel="apple-touch-icon" sizes="57x57" href="/static/fav.ico/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/static/fav.ico/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/static/fav.ico/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/static/fav.ico/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/static/fav.ico/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/static/fav.ico/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/static/fav.ico/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/static/fav.ico/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/fav.ico/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/static/fav.ico/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/fav.ico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/static/fav.ico/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/fav.ico/favicon-16x16.png">
-    <link rel="manifest" href="/static/fav.ico/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/static/fav.ico/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
     <!--STYLESHEET-->
     <!--=================================================-->
-
     <!--Open Sans Font -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
-
     <!--Bootstrap Stylesheet -->
     <!-- Latest compiled and minified CSS -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet" >
-
     <!--MagicCheck Stylesheet -->
     <link href="/static/css/magic-check.min.css" rel="stylesheet">
-
-
     <!--Nifty Stylesheet -->
     <link href="/static/css/nifty.min.css" rel="stylesheet">
-
     <!--Nifty Stylesheet -->
     <link href="/static/css/conicet.css" rel="stylesheet">
     <link href="/static/css/base.css" rel="stylesheet">
-    <!--
-    <link href="/static/css/print.css" rel="stylesheet" media="print">
-    -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> -->
-
-
     <!--DataTables [ OPTIONAL ]-->
-    <link href="/static/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
     <link href="/static/plugins/select2/css/select2.min.css" rel="stylesheet">
     <link href="/static/plugins/datatables/media/css/dataTables.bootstrap.css" rel="stylesheet">
-    <link href="/static/plugins/datatables/extensions/Responsive/css/dataTables.responsive.css" rel="stylesheet">
 {% endblock %}
 
 
@@ -63,115 +32,118 @@
 </div>
 
 <div class="boxed">
-
-    <!--CONTENT CONTAINER-->
-    <!--===================================================-->
+    <!--CONTENT CONTAINER--><!--===================================================-->
     <div id="content-container">
         <div id="page-content">
-            
-<!-- <h1>List Title</h1> -->
-
-<!-- Row selection and deletion (multiple rows) -->
 <!--===================================================-->
-    <div class="panel">
-        
-        <div id="ig-toolbar" class="table-toolbar-left" style="display:none">
-            
-            <div class="input-group">
-                <select id="tool_year" name="tool_year">
-                    <option value="">----</option>
-                    
-                    <option value="2023" selected>2023</option>
-                    
-                    <option value="2022" >2022</option>
-                    
-                    <option value="2021" >2021</option>
-                    
-                    <option value="2020" >2020</option>
-                    
-                    <option value="2019" >2019</option>
-                    
-                    <option value="2018" >2018</option>
-                    
-                    <option value="2017" >2017</option>
-                    
-                    <option value="2016" >2016</option>
-                    
-                    <option value="2015" >2015</option>
-                    
-                    <option value="2014" >2014</option>
-                    
-                </select>
-            </div>
-            <div class="input-group">
-                <select id="tool_section" name="tool_section">
-                    
-                    <option value="2">Q20</option>
-                    
-                    <option value="3">Q21</option>
-                    
-                    <option value="1">UNIHDO</option>
-                    
+            <div class="panel">
+                {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-dismissible alert-success">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong class="text-dark">{{ message }}</strong>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+                
+                <div class="panel-body">
+                    <a class="navbar-brand" href="crear/">    
+                        <i class="ti-shopping-cart m-r-5 m-l-5"> Nueva </i>
+                    </a>
+                    <table id="igDataTable" class="table table-striped table-hover table-responsive"gigtgtgtgg  cellspacing="0" width="100%" data-url="/purchases/provisioning/data">
+                        <thead>
+                            <tr>
+                                <th>Nº.</th>
+                                <th width="80px">Fecha Req.</th>
+                                <th>Unidad</th>
+                                <th>Depto.</th>
+                                <th>Rubro</th>
+                                <th>Obj. Contratación</th>
+                                <th>Estado</th>
+                                <th width="40px">Prioridad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for c in solicitudes %}
+                                <tr>
+                                    <td>SA-PD-{{c.sol_id_autoincremental}}-{{c.depto}}</td>
+                                    <td>{{c.fecha_sol}}</td>
+                                    <td>{{c.unidad}}</td>
+                                    <td>{{c.depto}}</td>
+                                    <td>{{c.rubro }}</td>
+                                    <td>{{c.objeto }}</td>
+                                    {% if c.valida == 1 %}
+                                        <td> Falta Aprobar 2K</td>
+                                    {% elif c.valida == 2%}
+                                        <td> Falta Aprobar K</td>
+                                    {% else %}
+                                        <td>Enviar </td>
+                                    {%endif%}
+                                    {% comment %} <td>{{c.estado }}</td> {% endcomment %}
+                                    {% if c.prioridad == 'Alta'%}
+                                        <td class="text-2x text-danger">{{c.prioridad }}</td>
+                                    {% else %}
+                                        <td>{{c.prioridad }}</td>
+                                    {% endif %}
+                                    <td><a href="edicionCurso/{{c.sol_id_autoincremental}}" class="btn btn-info"><i class="ti-marker-alt"></i></a></td>
+                                    {% if c.valida == 1 %}
+                                        {% if request.user.profile.job == "2K"%}
+                                            <td><a href="eliminarCurso/{{c.sol_id_autoincremental}}" class="btn btn-danger btnEliminacion"><i class="ti-trash"></i></a></td>
+                                            <td><a href="validaCurso/{{c.sol_id_autoincremental}}" class="btn btn-success"><i class="ti-thumb-up"></i></a></td>
+                                        {%endif%}
+                                    {% elif c.valida == 2%}
+                                        {% if request.user.profile.job == "COMANDANTE"%}
+                                            <td><a href="eliminarCurso/{{c.sol_id_autoincremental}}" class="btn btn-danger btnEliminacion"><i class="ti-trash"></i></a></td>
+                                            <td><a href="validaCurso/{{c.sol_id_autoincremental}}" class="btn btn-success"><i class="ti-thumb-up"></i></a></td>
+                                        {%endif%}
+                                    {% elif c.valida == 3%}
+                                        {% if request.user.profile.job == "OTRO"%}
+                                        <td><a href="" class="btn btn-info"><i class="ti-thumb-up"></i></a></td>
+                                        {%endif%}
+                                    {% else %}
+                                        <td><a href="" class="btn btn-info"><i class="ti-email"></i></a></td>
+                                    {%endif%}
+                                    
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
 
-                </select>
+                    {% for c in cursos %}
+                        {% if c.prioridad == 'Alta'%}
+                            <div class="card text-center bg-danger">
+                                <div class="card-header">
+                                    SA-PD-{{c.sol_id_autoincremental}}-{{c.depto}}
+                                </div>
+                                <div class="card-body">
+                                <h5 class="card-title">Objeto: {{c.objeto }}</h5>
+                                <p class="card-text">Justifica: {{c.justifica}}</p>
+                                <p class="card-text">Prioridad: {{c.prioridad}}</p>
+                                <a href="#" class="btn btn-primary">EMITIR OC</a>
+                                </div>
+                                <div class="card-footer text-body-secondary">
+                                    2 days ago
+                                </div>
+                            </div>
+                        {% else%}
+                            <div class="card text-center bg-success ">
+                                <div class="card-header">
+                                    SA-PD-{{c.sol_id_autoincremental}}-{{c.depto}}
+                                </div>
+                                <div class="card-body">
+                                <h5 class="card-title">{{c.objeto }}</h5>
+                                <p class="card-text">Justifica: {{c.justifica}}</p>
+                                <p class="card-text">Prioridad {{c.prioridad}}</p>
+                                <a href="#" class="btn btn-primary">EMITIR OC</a>
+                                </div>
+                                <div class="card-footer text-body-secondary">
+                                    2 days ago
+                                </div>
+                            </div>
+                        {% endif%}
+                    {% endfor %}
+                </div>
             </div>
-            <div class="input-group">
-                <select id="tool_sector" name="tool_sector">
-                    
-                    <option value="">Todos los Departamentos</option>
-                    
-                    <option value="A">Abastecimiento</option>
-                    
-                    <option value="C">Cubierta</option>
-                    
-                    <option value="M">Máquinas</option>
-                    
-                    <option value="O">Operaciones</option>
-                    
-                    <option value="S">Sanidad</option>
-                    
-                    <option value="SC">Segundo Comandante</option>
-                    
-                </select>
-            </div>
-            <div class="input-group">
-                <input id="tool_date" class="form-control" placeholder="Fecha" style="width:180px" >
-                <span class="input-group-addon bg-gray"><i class="fa fa-calendar"></i></span>
-            </div>
-            <div class="input-group">
-                <input type="search" class="form-control" placeholder="Buscar ... " style="width: 180px; padding-left: 8px">
-                <span class="input-group-addon bg-gray"><i class="fa fa-search"></i></span>
-            </div>
-        </div>
-        <div class="panel-body">
-            <a class="navbar-brand" href="crear/">    
-                <i class="ti-shopping-cart m-r-5 m-l-5"> Nueva </i>
-            </a>
-            <table id="igDataTable" class="table table-striped table-bordered big" cellspacing="0" width="100%" data-url="/purchases/provisioning/data">
-                <thead>
-                    <tr>
-                        <th width="20px">P</th>
-                        <th>Id.</th>
-                        <th>Orden</th>
-                        <th width="80px">Fecha</th>
-                        <th width="80px">Fecha Req.</th>
-                        <th>Solicitante</th>
-                        <th>Unidad</th>
-                        <th>Depto.</th>
-                        <th>Rubro</th>
-                        <th>Obj. Contratación</th>
-                        <th>Estado</th>
-                        <th width="40px">Items</th>
-                        <th width="40px">E.T.</th>
-                        <th width="40px">PDF</th>
-                        <th width="60px">&nbsp;</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </div>
-    </div>
 <!--===================================================-->
 <!-- End Row selection and deletion (multiple rows) -->
 

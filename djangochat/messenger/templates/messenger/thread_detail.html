@@ -1,15 +1,10 @@
 {% extends 'core/base.html' %}
 {% load static %}
-{% block title %}Hilo{% endblock %}
+{% block title %}Hilo | {% endblock %}
+{%block css%}<link rel="stylesheet" href="{% static 'css/messenger.css' %}">{%endblock%}
 {% block content %}
-<style>
-  .avatar  { width:50px; height:50px; float:left; margin-right:10px; }
-  .thread  { max-height:300px; overflow-y:auto; padding:0 0.5em;} 
-  .mine    { padding:0 0.5em 0.25em; background-color:rgba(230,242,245,.5); width:92%; margin-left:8%; }
-  .other   { padding:0 0.5em 0.25em; background-color:#f2f3f5; width:92%; }
-</style>
-<main role="main">
-  <div class="container">
+
+  <div class="container margen">
     <div class="row mt-3">
       <div class="col-md-9 mx-auto mb-5">
         <div class="row">
@@ -112,5 +107,5 @@
         </div>
     </div>
   </div>
-</main>
+
 {% endblock %}

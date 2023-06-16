@@ -31,14 +31,17 @@
             <div class="form-group">
                 <label for="fecha_sol" class="control-label">Departamento<span class="text-danger">*</span></label>
                     <select name="depto" class="select form-control" id="depto"> 
-                        <option value="" selected>Todos los Departamentos</option> 
-                        <option value="K">Comandante</option> 
-                        <option value="2K">Segundo Comandante</option>
-                        <option value="JEMAQ">Máquinas</option> 
-                        <option value="JEOP">Operaciones</option> 
-                        <option value="JECUB">Cubierta</option> 
-                        <option value="JEAB">Abastecimiento</option> 
-                    </select> 
+                        {% if request.user.profile.job %}
+                            <option value="{{request.user.profile.job}}" selected>{{request.user.profile.job}}</option> 
+                        {% else %}
+                            <option name="job" value="COMANDANTE">COMANDANTE</option>
+                            <option name="job" value="2K">2 COMANDANTE</option>
+                            <option name="job" value="JEMAQ">JEMAQ</option>
+                            <option name="job" value="JEOP">JEOP</option>
+                            <option name="job" value="JECU">JECU</option>
+                            <option name="job" value="JEAB">JEAB</option>
+                        {% endif %}
+                      </select> 
             </div>
             
             <div class="form-group">

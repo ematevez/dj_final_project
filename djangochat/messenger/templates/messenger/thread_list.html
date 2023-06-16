@@ -1,17 +1,15 @@
 {% extends 'core/base.html' %}
 {% load static %}
 {% block title %}Mensajes{% endblock %}
+{%block css%}<link rel="stylesheet" href="{% static 'css/messenger.css' %}">{%endblock%}
 {% block content %}
-<style>
-  .avatar  { width:50px; height:50px; float:left; margin-right:10px; }
-</style>
-<main role="main">
-  <div class="container">
-    <div class="row mt-3">
+
+  <div class="container margen">
+    <div class="row mb-5">
       <div class="col-md-9 mx-auto mb-5">
-        <div class="row">
+        <div class="row mt-5">
           <!-- Hilos de conversación -->
-          <div class="col-md-4">
+          <div class="col-md-4 mb-5">
             <!-- Recorremos los Threads y sólo mostramos los que tienen como mínimo 1 mensaje -->
             {% for thread in request.user.threads.all %}
               {% if thread.messages.all|length > 0 %}
@@ -44,5 +42,5 @@
       </div>
     </div>
   </div>
-</main>
+
 {% endblock %}
