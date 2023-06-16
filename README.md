@@ -1,5 +1,6 @@
 # ⚡ dj_final_project SYSCHAT
 
+
 # **🤔SOMOS GRUPO 19🤔**
 ## Comentario.
 Sistema de getion de recursos, con comunicacion interna, notificaciones personalizadas y graficos para su estacuion de trabajo.
@@ -12,7 +13,7 @@ https://ematevez1.pythonanywhere.com/
 
 ---Dependencias Como usar---
 
-#Entorno virtual
+# Entorno virtual
 ### pip install virtualenv
 ### virtualenv env
 ### source env/Scripts/activate
@@ -53,6 +54,7 @@ python manage.py runserver
  [<img src="https://user-images.githubusercontent.com/22551090/206501284-baa34dc7-8118-4bb1-b7f6-b605ee916bb9.png" width=50><br><sub>Emanuel Tevez</sub>](https://github.com/ematevez) 
  
  #### | [Eduardo De Luca](https://www.linkedin.com/in/eduardo-de-luca-8b28924/) | 
- [<img src="https://media.licdn.com/dms/image/C4D03AQHwmU1E3ZFswg/profile-displayphoto-shrink_200_200/0/1660144317426?e=1687392000&v=beta&t=2uhaA6U4dZHJhDyewi0lWIQ5aaH0lk0fT_f45TCT4gI" width=50><br><sub>Eduardo De Luca</sub>](https://github.com/gal-eze) 
+ [<img src="https://user-images.githubusercontent.com/22551090/206501284-baa34dc7-8118-4bb1-b7f6-b605ee916bb9.png" width=50><br><sub>Eduardo De Luca </sub>](https://github.com/gal-eze) 
+
  
 
